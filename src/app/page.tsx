@@ -6,6 +6,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -40,13 +48,62 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-green-100 rounded-lg p-8 text-center">
-                <div className="text-6xl font-bold text-green-600 mb-4">4+</div>
-                <div className="text-xl text-gray-700">Yillik tajriba</div>
-                <div className="text-lg text-gray-600 mt-2">
-                  O'zbekistonda va Markaziy Osiyoda
-                </div>
-              </div>
+              <Carousel className="w-full max-w-lg mx-auto">
+                <CarouselContent>
+                  <CarouselItem>
+                    <div className="relative aspect-video">
+                      <Image
+                        src="/images/greenhouse-1.jpg"
+                        alt="Greenhouse 1"
+                        fill
+                        className="rounded-lg object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="relative aspect-video">
+                      <Image
+                        src="/images/greenhouse-2.jpg"
+                        alt="Greenhouse 2"
+                        fill
+                        className="rounded-lg object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="relative aspect-video">
+                      <Image
+                        src="/images/greenhouse-3.jpg"
+                        alt="Greenhouse 3"
+                        fill
+                        className="rounded-lg object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="relative aspect-video">
+                      <Image
+                        src="/images/greenhouse-4.jpg"
+                        alt="Greenhouse 4"
+                        fill
+                        className="rounded-lg object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="relative aspect-video">
+                      <Image
+                        src="/images/greenhouse-5.jpg"
+                        alt="Greenhouse 5"
+                        fill
+                        className="rounded-lg object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </Carousel>
             </div>
           </div>
         </div>
@@ -59,21 +116,16 @@ export default function Home() {
             Va'dalarimiz videosini tomosha qiling
           </h2>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-              <div className="text-center">
-                <svg
-                  className="w-16 h-16 text-gray-400 mx-auto mb-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <p className="text-gray-600">Video hozircha mavjud emas</p>
-              </div>
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/r_jqxaZ8CwE"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full"
+              ></iframe>
             </div>
           </div>
         </div>
