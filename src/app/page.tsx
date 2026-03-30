@@ -24,7 +24,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-20">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                4 yildan ortiq tajriba bilan 95 mamlakatda sizning yoningizdagi
+                60 yildan ortiq tajriba bilan 95 mamlakatda sizning yoningizdagi
                 oilaviy kompaniya
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -53,7 +53,7 @@ export default function Home() {
                   <CarouselItem>
                     <div className="relative aspect-video">
                       <Image
-                        src="/images/greenhouse-1.jpg"
+                        src="/images/1.jpg"
                         alt="Greenhouse 1"
                         fill
                         className="rounded-lg object-cover"
@@ -63,7 +63,7 @@ export default function Home() {
                   <CarouselItem>
                     <div className="relative aspect-video">
                       <Image
-                        src="/images/greenhouse-2.jpg"
+                        src="/images/2.jpg"
                         alt="Greenhouse 2"
                         fill
                         className="rounded-lg object-cover"
@@ -73,7 +73,7 @@ export default function Home() {
                   <CarouselItem>
                     <div className="relative aspect-video">
                       <Image
-                        src="/images/greenhouse-3.jpg"
+                        src="/images/3.jpg"
                         alt="Greenhouse 3"
                         fill
                         className="rounded-lg object-cover"
@@ -83,7 +83,7 @@ export default function Home() {
                   <CarouselItem>
                     <div className="relative aspect-video">
                       <Image
-                        src="/images/greenhouse-4.jpg"
+                        src="/images/4.jpg"
                         alt="Greenhouse 4"
                         fill
                         className="rounded-lg object-cover"
@@ -93,7 +93,7 @@ export default function Home() {
                   <CarouselItem>
                     <div className="relative aspect-video">
                       <Image
-                        src="/images/greenhouse-5.jpg"
+                        src="/images/7.jpg"
                         alt="Greenhouse 5"
                         fill
                         className="rounded-lg object-cover"
@@ -207,7 +207,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company */}
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">UZ-GROW</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                RICHEL GROUP
+              </h3>
               <ul className="space-y-2">
                 <li>
                   <a
@@ -404,7 +406,7 @@ export default function Home() {
       <section className="py-16 bg-green-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            UZ-GROW bilan hamkorlik qiling
+            RICHEL GROUP bilan hamkorlik qiling
           </h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
             Biz sizning issiqxona loyihangizni amalga oshirishga tayyormiz. 4
