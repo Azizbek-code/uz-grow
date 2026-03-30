@@ -13,7 +13,7 @@ export default function Footer() {
               <span className="text-xl font-bold">UZ-GROW</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              UZ-GROW — O‘zbekistonda zamonaviy, energiya tejamkor va yuqori hosildorlikka mo‘ljallangan issiqxonalarni loyihalash va qurish bo‘yicha professional agro-injiniring kompaniya.
+              UZ-GROW — Ozbekistonda zamonaviy, energiya tejamkor va yuqori hosildorlikka mo‘ljallangan issiqxonalarni loyihalash va qurish bo‘yicha professional agro-injiniring kompaniya.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition">
