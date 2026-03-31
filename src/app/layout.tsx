@@ -1,31 +1,81 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
+import ClientLayoutWrapper from "@/components/ui/client-layout-wrapper";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const cormorantGaramond = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   title:
     "UZ-GROW - O'zbekistonda zamonaviy issiqxona qurish va agro-injiniring xizmatlari",
   description:
-    "UZ-GROW — issiqxona qurish, loyihalash va jihozlash bo'yicha professional kompaniya. Turnkey issiqxona qurish xizmati.",
+    "UZ-GROW — issiqxona qurish, loyihalash va jihozlash bo'yicha professional kompaniya. Turnkey issiqxona qurish xizmati. 4+ yillik tajriba, 100+ muvaffaqiyatli loyiha.",
   keywords:
-    "issiqxona qurish, turnkey issiqxona, agro-injiniring, issiqxona jihozlari, issiqxona loyiha",
+    "issiqxona qurish, turnkey issiqxona, agro-injiniring, issiqxona jihozlari, issiqxona loyiha, issiqxona texnologiyalari, O'zbekiston issiqxona",
+  authors: [{ name: "UZ-GROW Team" }],
+  creator: "UZ-GROW",
+  publisher: "UZ-GROW",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://uz-grow.uz"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "uz-UZ": "/uz",
+      "en-US": "/en",
+    },
+  },
   openGraph: {
     title: "UZ-GROW - O'zbekistonda zamonaviy issiqxona qurish",
     description:
-      "UZ-GROW — issiqxona qurish, loyihalash va jihozlash bo'yicha professional kompaniya",
+      "UZ-GROW — issiqxona qurish, loyihalash va jihozlash bo'yicha professional kompaniya. Turnkey issiqxona qurish xizmati.",
     type: "website",
+    locale: "uz_UZ",
+    url: "https://uz-grow.uz",
+    siteName: "UZ-GROW",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "UZ-GROW - Zamonaviy issiqxona texnologiyalari",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UZ-GROW - O'zbekistonda zamonaviy issiqxona qurish",
+    description:
+      "UZ-GROW — issiqxona qurish, loyihalash va jihozlash bo'yicha professional kompaniya.",
+    images: ["/images/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+    yandex: "your-yandex-verification-code",
   },
 };
 
@@ -37,12 +87,11 @@ export default function RootLayout({
   return (
     <html
       lang="uz"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${cormorantGaramond.variable} ${dmSans.variable} h-full antialiased`}
+      data-scroll-behavior="smooth"
     >
       <body className="min-h-full flex flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
       </body>
     </html>
   );
